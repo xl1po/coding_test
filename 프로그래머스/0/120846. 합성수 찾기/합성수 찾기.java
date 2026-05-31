@@ -1,0 +1,18 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        
+        if(n != 1) {
+            for(int i=2; i<=n; i++) {
+                for(int j=2; j*j<=i; j++) {
+                    if(i/j != 1 && i%j == 0) {
+                        answer++;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        return answer;
+    }
+}
